@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Una simple calculadora</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1eb06e;
+
+    }
+
+    
+    .s7 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s7:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s7:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .s1 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s1:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s1:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .s2 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s2:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s2:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .s3 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s3:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s3:focus {
+        background-color: rgb(144, 59, 59);
+    }.s4 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s4:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s4:focus {
+        background-color: rgb(144, 59, 59);
+    }.s5 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s5:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s5:focus {
+        background-color: rgb(144, 59, 59);
+    }
+    
+    .s6 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s6:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s6:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .s9 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s9:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s9:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .s8 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s8:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s8:focus {
+        background-color: rgb(144, 59, 59);
+    }
+    .s0 {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .s0:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s0:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .smas {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .smas:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .smas:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .sigual {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .sigual:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    
+    .spunto {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .spunto:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .spunto:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .sp {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .sp:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .sp:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .asterisco {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .asterisco:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .asterisco:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .flecha{
+        background-color: rgb(151, 151, 177);
+    }
+
+    .flecha:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .flecha:focus {
+        background-color: rgb(144, 59, 59);
+    }
+    .sc {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .sc:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .s:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .div {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .div:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .div:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    .guion {
+        background-color: rgb(151, 151, 177);
+    }
+
+    .guion:hover {
+        background-color: rgb(31, 72, 72);
+    }
+
+    .guon:focus {
+        background-color: rgb(144, 59, 59);
+    }
+
+    
+
+
+
+
+
+
+
+
+
+    .calculator {
+        width: 300px;
+        margin: 100px auto;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-color: #979fc3;
+        padding: 20px;
+    }
+    input[type="button"] {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input[type="text"] {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 10px;
+        text-align: right;
+        font-size: 24px;
+    }
+    .calculator{
+        box-shadow: #979fc3;
+    }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+    <input class="texto" type="text" id="display" disabled>
+    <input class="sp" type="button" value="√" onclick="sqrt()">
+    <input class="sc" type="button" value="C" onclick="clearDisplay()">
+    <input class="flecha" type="button" value="←" onclick="deleteChar()">
+    <input class="div" type="button" value="/" onclick="addToDisplay('/')">
+    <br>
+    <input class="s7" type="button" value="7" onclick="addToDisplay('7')">
+    <input class="s8" type="button" value="8" onclick="addToDisplay('8')">
+    <input class="s9" type="button" value="9" onclick="addToDisplay('9')">
+    <input class="asterisco" type="button" value="*" onclick="addToDisplay('*')">
+    <br>
+    <input class="s4" type="button" value="4" onclick="addToDisplay('4')">
+    <input class="s5" type ="button" value="5" onclick="addToDisplay('5')">
+    <input class="s6" type="button" value="6" onclick="addToDisplay('6')">
+    <input class="guion" type="button" value="-" onclick="addToDisplay('-')">
+    <br>
+    <input class="s1" type="button" value="1" onclick="addToDisplay('1')">
+    <input class="s2" type="button" value="2" onclick="addToDisplay('2')">
+    <input class="s3" type="button" value="3" onclick="addToDisplay('3')">
+    <input class="smas" type="button" value="+" onclick="addToDisplay('+')">
+    <br>
+    <input class="s0" type="button" value="0" onclick="addToDisplay('0')">
+    <input class="spunto" type="button" value="." onclick="addToDisplay('.')">
+    <input class="sigual" type="button" value="=" onclick="calculate()">
+</div>
+
+<script>
+    function addToDisplay(value) {
+        document.getElementById('display').value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').value = '';
+    }
+
+    function deleteChar() {
+        var currentValue = document.getElementById('display').value;
+        document.getElementById('display').value = currentValue.slice(0, -1);
+    }
+
+    function sqrt() {
+        var currentValue = document.getElementById('display').value;
+        document.getElementById('display').value = Math.sqrt(currentValue);
+    }
+
+    function calculate() {
+        try {
+            document.getElementById('display').value = eval(document.getElementById('display').value);
+        } catch (error) {
+            document.getElementById('display').value = 'Error';
+        }
+    }
+</script>
+
+</body>
+</html>
